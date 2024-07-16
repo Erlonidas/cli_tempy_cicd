@@ -5,7 +5,7 @@ from components import SourceCode, Method, Classe, Data
 class ReportGeneratorCSV:
 
 	def __init__(self, tempdir):
-		self.file = open("./test/test_smell_tempy_cli/report/test_smell_csv_log.csv", 'w')
+		self.file = open("./cli_tempy_cicd/report/test_smell_csv_log.csv", 'w')
 		self.content = ''
 		self.number_of_test_smells = 1
 		self.tempdir = tempdir

@@ -1,6 +1,6 @@
 import sys, os
 
-sys.path.append('./test/test_smell_tempy_cli/assets')
+sys.path.append('./cli_tempy_cicd/assets')
 from python_parser import PythonParser
 from report_generator import ReportGenerator
 from report_generator_csv import ReportGeneratorCSV
@@ -48,11 +48,11 @@ def get_all_test_file(new_list, tempdir):
 	sys.exit(0)
 		
 
-def close_window(window): # nao usa 
+def close_window(window):  
 	window.destroy()
 
 
-def close_window_confirmation(newWindow): # nao usa
+def close_window_confirmation(newWindow): 
     if (tkinter.messagebox.askokcancel(title=None, message="Do you really want to close this window?")):
     	close_window(newWindow)
 
@@ -157,7 +157,6 @@ def select_directory(path_root: str):
 	Identificado o caminho onde estão os testes.
 	"""
 	currdir = os.getcwd()
-	#new_path = os.path.join(currdir, 'test/unit')   <<<<<<<<
 	new_path = os.path.join(currdir, path_root)
 
 	if (len(new_path) > 0):
@@ -165,10 +164,9 @@ def select_directory(path_root: str):
 
 
 if __name__ == '__main__':
-	p = Path("./test/test_smell_tempy_cli/report/") 
-	#p = Path("./TEMPY/report/")
+	p = Path("./cli_tempy_cicd/report/") 
 	if p.exists() == False:
-		os.mkdir("./test/test_smell_tempy_cli/report/")
+		os.mkdir("./cli_tempy_cicd/report/")
 	
 	if len(sys.argv) != 2:
 		sys.stderr.write('Usage: Missing argv <directory_test_root> class "str"')

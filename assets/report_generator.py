@@ -4,7 +4,7 @@ from components import SourceCode, Method, Classe, Data
 class ReportGenerator:
 
 	def __init__(self):
-		self.file = open("./test/test_smell_tempy_cli/report/test_smell_report_web_page.html", 'w')
+		self.file = open("./cli_tempy_cicd/report/test_smell_report_web_page.html", 'w')
 		self.content = ''
 		self.number_of_test_smells = 1
 
